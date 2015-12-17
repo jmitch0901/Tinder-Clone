@@ -8,15 +8,40 @@
 
 import UIKit
 import CoreData
+import Parse
+import Bolts
+import FBSDKCoreKit
+import FBSDKLoginKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    
 
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        
+        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("kwkY5JhZ7PsJWtGaPKSTW4nVIN3ctCA4HOyTTMbv",
+            clientKey: "4nkVT49YVGREKQ4QzfEXbhQ6mHB1mS0gcuvILc7a")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        
+        
         return true
     }
 

@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("kwkY5JhZ7PsJWtGaPKSTW4nVIN3ctCA4HOyTTMbv",
             clientKey: "4nkVT49YVGREKQ4QzfEXbhQ6mHB1mS0gcuvILc7a")
         
+        PFUser.enableAutomaticUser()
      
         
         

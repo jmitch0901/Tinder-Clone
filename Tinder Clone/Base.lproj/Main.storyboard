@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -58,11 +59,97 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="bzA-JS-WIx" id="kN9-Ue-2r5"/>
+                        <segue destination="1mP-OP-2nV" kind="show" identifier="genderPreferenceSegue" id="DGg-0T-wSa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440" y="332"/>
+            <point key="canvasLocation" x="232" y="332"/>
+        </scene>
+        <!--Gender Preference View Controller-->
+        <scene sceneID="62j-Sk-ZsM">
+            <objects>
+                <viewController id="1mP-OP-2nV" customClass="GenderPreferenceViewController" customModule="Tinder_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="otE-KB-2d1"/>
+                        <viewControllerLayoutGuide type="bottom" id="RV3-Se-4FB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lcw-09-esM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylg-Bt-O4x">
+                                <rect key="frame" x="20" y="41" width="560" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Rz0-kd-1qb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JIk-h8-c0I">
+                                <rect key="frame" x="130" y="143" width="341" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="341" id="dSc-4u-CcA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who do you prefer?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGp-Wt-3Us">
+                                <rect key="frame" x="225" y="523" width="151" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="GTB-bK-gHG"/>
+                                    <constraint firstAttribute="width" constant="151" id="Hic-z9-UwE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sP0-a9-dX7">
+                                <rect key="frame" x="240" y="552" width="121" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="HhX-KC-7OW"/>
+                                    <constraint firstAttribute="height" constant="28" id="qXR-vI-G2R"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Men"/>
+                                    <segment title="Women"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENY-x6-8we">
+                                <rect key="frame" x="509" y="552" width="63" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="BDF-cp-fPl"/>
+                                    <constraint firstAttribute="height" constant="30" id="PfF-5Z-zCa"/>
+                                </constraints>
+                                <state key="normal" title="Go!"/>
+                                <connections>
+                                    <action selector="goIntoMainApp:" destination="1mP-OP-2nV" eventType="touchUpInside" id="MRj-yf-8YL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sP0-a9-dX7" firstAttribute="centerX" secondItem="lcw-09-esM" secondAttribute="centerX" id="8hJ-KO-hK6"/>
+                            <constraint firstItem="sP0-a9-dX7" firstAttribute="top" secondItem="xGp-Wt-3Us" secondAttribute="bottom" constant="8" id="Cp3-dp-NxX"/>
+                            <constraint firstItem="xGp-Wt-3Us" firstAttribute="top" secondItem="JIk-h8-c0I" secondAttribute="bottom" constant="66" id="HlO-Za-BmO"/>
+                            <constraint firstItem="JIk-h8-c0I" firstAttribute="top" secondItem="Ylg-Bt-O4x" secondAttribute="bottom" constant="77" id="JDm-lW-cbS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ENY-x6-8we" secondAttribute="trailing" constant="8" id="Nbe-P2-2NM"/>
+                            <constraint firstItem="JIk-h8-c0I" firstAttribute="centerX" secondItem="lcw-09-esM" secondAttribute="centerX" id="V1N-l2-bHy"/>
+                            <constraint firstItem="RV3-Se-4FB" firstAttribute="top" secondItem="sP0-a9-dX7" secondAttribute="bottom" constant="20" id="Wuo-2r-ES9"/>
+                            <constraint firstItem="Ylg-Bt-O4x" firstAttribute="top" secondItem="otE-KB-2d1" secondAttribute="bottom" constant="21" id="Y8h-8R-ARd"/>
+                            <constraint firstItem="xGp-Wt-3Us" firstAttribute="centerX" secondItem="lcw-09-esM" secondAttribute="centerX" id="hz3-r7-Pxs"/>
+                            <constraint firstItem="Ylg-Bt-O4x" firstAttribute="centerX" secondItem="lcw-09-esM" secondAttribute="centerX" id="iIg-GY-ryR"/>
+                            <constraint firstItem="RV3-Se-4FB" firstAttribute="top" secondItem="ENY-x6-8we" secondAttribute="bottom" constant="18" id="qtS-Qq-DKM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="genderPreference" destination="sP0-a9-dX7" id="H73-7D-4sW"/>
+                        <outlet property="userImage" destination="JIk-h8-c0I" id="OpJ-db-Vbs"/>
+                        <outlet property="userName" destination="Ylg-Bt-O4x" id="fmK-ff-Wkl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dI0-xX-nkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="332"/>
         </scene>
     </scenes>
 </document>

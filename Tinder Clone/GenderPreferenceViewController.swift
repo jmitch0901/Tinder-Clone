@@ -73,7 +73,13 @@ class GenderPreferenceViewController: UIViewController {
             parseUserInfo.saveInBackground()
         }
         
-        print(parseUserInfo!)
+        if parseUserInfo != nil {
+            parseUserInfo?.saveInBackground()
+            parseUserInfo = nil
+        }
+        self.performSegueWithIdentifier("mainAppSegue2", sender: self)
+        
+        //print(parseUserInfo!)
         
         
     }

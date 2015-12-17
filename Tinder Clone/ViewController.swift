@@ -73,7 +73,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     func goIntoApp(showMainApp: Bool){
         if showMainApp {
             //self.performSegueWithIdentifier("mainAppSegue", sender: nil)
-            //self.performSegueWithIdentifier("genderPreferenceSegue", sender: nil)
+            self.performSegueWithIdentifier("genderPreferenceSegue", sender: nil)
         } else {
             print("Performing Segue")
             self.performSegueWithIdentifier("genderPreferenceSegue", sender: nil)

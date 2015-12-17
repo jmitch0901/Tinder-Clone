@@ -19,7 +19,25 @@ class GenderPreferenceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        
         if let data = parseUserInfo{
+            
+            /*if String(data["gender"]) == "male" {
+            
+            }*/
+            
+            if let isMale = data["isMale"] as? Bool {
+                if isMale{
+                    self.genderPreference.selectedSegmentIndex = 1
+                }
+            }
+            
+            
+            
+            
+            
             if let name = data["name"] {
                 userName.text = String(name)
             }
@@ -51,7 +69,7 @@ class GenderPreferenceViewController: UIViewController {
     @IBAction func goIntoMainApp(sender: AnyObject) {
         
         if let parseUserInfo = parseUserInfo {
-            parseUserInfo["prefersWomen"] = !self.genderPreference.enabled
+            parseUserInfo["prefersWomen"] = Bool(self.genderPreference.selectedSegmentIndex == 1)
             parseUserInfo.saveInBackground()
         }
         

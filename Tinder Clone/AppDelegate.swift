@@ -16,8 +16,19 @@ import FBSDKLoginKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    
+    /*
+        1. Override both application functions and MATCH with facebook's calles
+        2. For applicationDidBecomeActive(application: UIApplication), return the FB details
+        3. Update you plist with whatever facebook is telling you
+        4. Download latest sdk
+        5. Make sure you reference the SDKs folder correctly by going to Building Settings -> Framework Paths
+        6. MAke sure you activate/create app on developer.facebook.com (Note it should guide the plist st00f)
+    */
 
     var window: UIWindow?
+    
     
     
 
@@ -37,12 +48,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("kwkY5JhZ7PsJWtGaPKSTW4nVIN3ctCA4HOyTTMbv",
             clientKey: "4nkVT49YVGREKQ4QzfEXbhQ6mHB1mS0gcuvILc7a")
         
+     
+        
+        
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         
         
-        return true
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -61,6 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(application: UIApplication) {

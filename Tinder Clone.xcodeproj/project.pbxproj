@@ -50,7 +50,6 @@
 		09BDDF361C2257DD0036E54D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		09BDDF401C2259EB0036E54D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20151111/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		09BDDF411C2259EB0036E54D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
-		09BDDF441C225D5D0036E54D /* TinderBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinderBridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +103,6 @@
 				09BDDF181C2257580036E54D /* LaunchScreen.storyboard */,
 				09BDDF1B1C2257580036E54D /* Info.plist */,
 				09BDDF131C2257580036E54D /* Tinder_Clone.xcdatamodeld */,
-				09BDDF461C225D790036E54D /* Supporting Files */,
 			);
 			path = "Tinder Clone";
 			sourceTree = "<group>";
@@ -127,14 +125,6 @@
 				09BDDF221C22577C0036E54D /* Parse.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		09BDDF461C225D790036E54D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				09BDDF441C225D5D0036E54D /* TinderBridgingHeader.h */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

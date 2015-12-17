@@ -17,12 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzA-JS-WIx" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="41" y="242" width="140" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tinder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyE-p4-qeB">
+                                <rect key="frame" x="200" y="60" width="201" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="XEk-LB-xRB"/>
+                                    <constraint firstAttribute="height" constant="39" id="f7P-yU-TIu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to Facebook to Continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkR-fn-luq">
+                                <rect key="frame" x="183" y="115" width="234" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="C5o-bN-U1F"/>
+                                    <constraint firstAttribute="width" constant="234" id="TFU-U1-mM6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzA-JS-WIx" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="230" y="504" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7yC-Cy-49X"/>
+                                    <constraint firstAttribute="width" constant="140" id="deC-Hx-ftA"/>
+                                </constraints>
+                                <state key="normal" title="Facebook Login"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dyE-p4-qeB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Vl-3K-TZ8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bzA-JS-WIx" secondAttribute="bottom" constant="66" id="QD6-bP-y2U"/>
+                            <constraint firstItem="rkR-fn-luq" firstAttribute="top" secondItem="dyE-p4-qeB" secondAttribute="bottom" constant="16" id="Swx-7I-mVn"/>
+                            <constraint firstItem="bzA-JS-WIx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wsp-5m-NOz"/>
+                            <constraint firstItem="dyE-p4-qeB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="dV1-Ft-Out"/>
+                            <constraint firstItem="rkR-fn-luq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ozB-Ol-o10"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="bzA-JS-WIx" id="kN9-Ue-2r5"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0915AE8B1C248FFB006F5F7F /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0915AE8A1C248FFB006F5F7F /* dog.jpg */; };
 		09AB7B6B1C2340460017B306 /* GenderPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AB7B6A1C2340460017B306 /* GenderPreferenceViewController.swift */; };
 		09BDDF0D1C2257580036E54D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BDDF0C1C2257580036E54D /* AppDelegate.swift */; };
 		09BDDF0F1C2257580036E54D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BDDF0E1C2257580036E54D /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0915AE8A1C248FFB006F5F7F /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 		09AB7B6A1C2340460017B306 /* GenderPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderPreferenceViewController.swift; sourceTree = "<group>"; };
 		09BDDF091C2257580036E54D /* Tinder Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BDDF0C1C2257580036E54D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		09BDDF0B1C2257580036E54D /* Tinder Clone */ = {
 			isa = PBXGroup;
 			children = (
+				0915AE8A1C248FFB006F5F7F /* dog.jpg */,
 				09BDDF0C1C2257580036E54D /* AppDelegate.swift */,
 				09BDDF0E1C2257580036E54D /* ViewController.swift */,
 				09AB7B6A1C2340460017B306 /* GenderPreferenceViewController.swift */,
@@ -191,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0915AE8B1C248FFB006F5F7F /* dog.jpg in Resources */,
 				09BDDF1A1C2257580036E54D /* LaunchScreen.storyboard in Resources */,
 				09BDDF171C2257580036E54D /* Assets.xcassets in Resources */,
 				09BDDF121C2257580036E54D /* Main.storyboard in Resources */,

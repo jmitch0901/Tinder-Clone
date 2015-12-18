@@ -18,6 +18,11 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var loginButton: FBSDKLoginButton!
     
     let loginManager = FBSDKLoginManager()
+    
+    
+    var needToTransition = false
+    var boolToTransitionWith = false
+
 
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
     {
@@ -60,8 +65,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 //print(data)
                 if let data = data as? NSDictionary{
                     print(data)
-                    //Start importing PFUser information
-                   // userData = data
                     self.uploadUserToParse(data)
                 } else {
                     self.showQuickAlert("Error", message: "There was an error requesting Facebook. Please try again.")
@@ -72,7 +75,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func goIntoApp(showMainApp: Bool){
         if showMainApp {
-            self.performSegueWithIdentifier("mainAppSegue", sender: self)
+            self.performSegueWithIdentifier("mainAppSegue", sender: nil)
         } else {
             print("Performing Segue")
             self.performSegueWithIdentifier("genderPreferenceSegue", sender: nil)
@@ -149,16 +152,21 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        if FBSDKAccessToken.currentAccessToken() != nil {
+            print("You're already logged in")
+            self.makeMeRequest()
+        }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.delegate = self
         loginButton.readPermissions = ["user_friends","email","public_profile"]
-        if FBSDKAccessToken.currentAccessToken() != nil {
-            print("You're already logged in")
-            self.makeMeRequest()
-        }
+        
+        
+
+        
     }
     
         
